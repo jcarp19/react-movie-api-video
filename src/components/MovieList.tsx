@@ -9,8 +9,8 @@ import LoadMoreMovies from "../services/LoadMoreMovies";
 export default function MovieList() {
     const [searchMovie, setSearchMovie] = useState<SearchMovieTitle>();
     
-    function onSubmit(searchQuery: string):void {
-        GetMovies(searchQuery).then((data) => setSearchMovie(data));
+    function onSubmit(payload:{seachQuery: string, filterType: string}):void {
+        GetMovies(payload.seachQuery, payload.filterType).then((data) => setSearchMovie(data));
     }
    
     return (
