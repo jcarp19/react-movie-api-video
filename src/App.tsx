@@ -11,11 +11,11 @@ function App() {
 
       <Router>
       <Switch>
-        <Route>
-          <MovieList />
-        </Route>
         <Route path="/MovieDetail/:id">
           <MovieDetail />
+        </Route>
+        <Route path="/">
+          <MovieList />
         </Route>
         
       </Switch>

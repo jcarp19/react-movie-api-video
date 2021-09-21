@@ -5,6 +5,7 @@ import "./MovieResults.css";
 
 export default function MovieResult({poster_path,title, id, vote_average, overview}: ResultsEntity) {
     let posterPath = `https://www.themoviedb.org/t/p/original${poster_path}`;
+    let idPath = {id};
     return (
         <div>
             <img className="moviePoster" src={posterPath} alt="" />

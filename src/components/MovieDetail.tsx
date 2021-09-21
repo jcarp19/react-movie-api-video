@@ -1,9 +1,14 @@
-interface RouteParams {
-    id: number
-}
-export default function MovieDetail() {
+
+
+export default function MovieDetail(id: number) {
 
     return (
-        <h1>Movie Details</h1>
+        <div>
+            <h1>Movie Details</h1>
+            <p>DETAIL WILL GO HERE</p>
+            <button type="submit">Add To Watch List</button>
+            
+            
+        </div>
     )
 }
