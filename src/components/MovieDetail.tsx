@@ -1,14 +1,18 @@
+import {useState} from "react";
+import MovieDetails from "../services/MovieDetails";
+import SingleMovieDetail from "../models/SingleMovieDetail";
 
-
-export default function MovieDetail(id: number) {
+export default function MovieDetail() {
+    const [movieDetail, setMovieDetails] = useState<SingleMovieDetail>();
+    function showPage () {
+        MovieDetails(11).then((data) => setMovieDetails(data));
+    }
 
     return (
         <div>
             <h1>Movie Details</h1>
-            <p>DETAIL WILL GO HERE</p>
-            <button type="submit">Add To Watch List</button>
-            
-            
+            <p>{movieDetail}</p>
+            <button onClick={showPage}>Add To Watch List</button>
         </div>
     )
 }
