@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import "./MovieSearchForm.css";
 
 export default function MovieSearchForm({onSubmit}:{onSubmit: (payload:{seachQuery: string, filterType: string}) => void}) {
     const [movieQuery, setMovieQuery] = useState("");
@@ -12,9 +13,11 @@ export default function MovieSearchForm({onSubmit}:{onSubmit: (payload:{seachQue
                 setMovieQuery("")
                 setFilter("")
                 }}>
-                <input type="text" value={movieQuery} onChange={(e) => {
+                <label htmlFor="search">Search
+                <input name="search" id="search" type="text" value={movieQuery} onChange={(e) => {
                     setMovieQuery(e.target.value);
                 }} />
+                </label>
                 <label htmlFor="filter">Filter By:
                     <select name="filter" id="filter" onChange={(e) => {
                         console.log(e.target.value)
@@ -29,7 +32,7 @@ export default function MovieSearchForm({onSubmit}:{onSubmit: (payload:{seachQue
                         <option value="top_rated">Top Rated</option>
                     </select>
                 </label>
-                <button type="submit">Update</button>
+                <button type="submit">Filter Movies</button>
             </form>
         </div>
     )

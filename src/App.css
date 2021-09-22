@@ -1,0 +1,15 @@
+.App {
+    background-color: #000000;
+    height: 100vh;
+    color: #ffffff;
+}
+.nav-link {
+    color: #ffffff;
+}
+.nav-link:hover {
+    color:lawngreen;
+}
+.logo {
+    margin: 1em;
+    max-width: 75%;
+}

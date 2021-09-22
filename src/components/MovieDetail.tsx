@@ -7,7 +7,7 @@ export default function MovieDetail() {
     function showPage () {
         MovieDetails(11).then((data) => setMovieDetails(data));
     }
-// jim was here
+
     return (
         <div>
             <h1>Movie Details</h1>
