@@ -11,10 +11,20 @@ function App() {
 
       <Router>
       <Switch>
+        
         <Route path="/MovieDetail/:id">
           <MovieDetail  />
         </Route>
-        <Route path="/">
+        
+        <Route exact path="/">
+          <MovieList />
+        </Route>
+
+        <Route exact path="/">
+          <MovieList />
+        </Route>
+        
+        <Route exact path="/">
           <MovieList />
         </Route>
         
