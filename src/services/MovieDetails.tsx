@@ -3,7 +3,7 @@ import SingleMovieDetail from "../models/SingleMovieDetail";
 
 export default function MovieDetails(id: number): Promise<SingleMovieDetail> {
     //   let url = "https://api.themoviedb.org/3/movie/";
-      let url = `"https://api.themoviedb.org/3/movie/${id}"`;
+      let url = `"https://api.themoviedb.org/3/movie/"${id}`;
 
     
     return axios
