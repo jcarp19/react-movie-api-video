@@ -1,14 +1,45 @@
 MovieResults {
     background-color: #000000;
 }
+.MovieSearchWrapper {
+    margin: 0;
+    padding: 0;
+}
+.headline {
+    margin: 2rem 1rem .5rem 1rem;
+    padding: 0;
+}
+.main-copy {
+    margin: 0 1rem 2rem 1rem;
+    padding: 0;
+}
 form {
     display: flex;
     flex-direction: column;
-    margin: 1em;
+    margin: 2em 1em 1em 1em;
+}
+.form-label {
+    font-weight: bold;
+    margin-bottom: .5em;
+    margin-left: .5em;
 }
 input {
+    box-sizing: border-box;
+    padding: 1em;
     margin-bottom: 2em;
+    border: 1px solid lawngreen;
+    border-radius: 50px;
 }
 select {
-    margin-bottom: 1em;
+    box-sizing: border-box;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: 1px solid lawngreen;
+    border-radius: 50px;
+}
+form > .btn {
+    max-width: 50%;
+    padding: 1em;
+    align-self: center;
+    font-weight: bold;
 }

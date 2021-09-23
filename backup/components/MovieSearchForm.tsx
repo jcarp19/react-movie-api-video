@@ -7,20 +7,18 @@ export default function MovieSearchForm({onSubmit}:{onSubmit: (payload:{seachQue
 
     return (
         <div className="MovieSearchWrapper">
-            <h1 className="headline">Find a great movie</h1>
-            <p className="main-copy">Use the search box below to search by title, or select from one of the filters to see some of today's most popular movies.</p>
             <form onSubmit={(e) => {
                 e.preventDefault();
                 onSubmit({seachQuery: movieQuery, filterType: filter});
                 setMovieQuery("")
                 setFilter("")
                 }}>
-                <label htmlFor="search" className="form-label">Search</label>
-                <input name="search" id="search" placeholder="Search by title" type="text" value={movieQuery} onChange={(e) => {
+                <label htmlFor="search">Search
+                <input name="search" id="search" type="text" value={movieQuery} onChange={(e) => {
                     setMovieQuery(e.target.value);
                 }} />
-                
-                <label htmlFor="filter" className="form-label">Filter By:</label>
+                </label>
+                <label htmlFor="filter">Filter By:
                     <select name="filter" id="filter" onChange={(e) => {
                         console.log(e.target.value)
                         setFilter(e.target.value)
@@ -33,8 +31,8 @@ export default function MovieSearchForm({onSubmit}:{onSubmit: (payload:{seachQue
                         {/* /movie/top_rated */}
                         <option value="top_rated">Top Rated</option>
                     </select>
-                
-                <button className="btn" type="submit">Show Me The Movies</button>
+                </label>
+                <button type="submit">Filter Movies</button>
             </form>
         </div>
     )

@@ -1,9 +1,46 @@
 .moviePoster {
-    width: 90%;
-    margin: 0 auto;
+    width: 150px;
 }
 .movie-results {
     background-color: #000000;
-    height: 100vh;
+    box-sizing: border-box;
     padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+.movie-results-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 1em;
+}
+.movie-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.movie-release {
+    margin-top: .5em;
+    margin-bottom: 2em;
+}
+.spacer {
+    width: 250px;
+    margin: 0 auto;
+    border-bottom: 1px solid #222222;
+    background-color: #000000;
+}
+.btn {
+    min-width: 10em;
+    box-sizing: border-box;
+    padding: .5em 1em;
+    border-radius: 50px;
+    border: 1px solid #000000;
+    color: darkgreen;
+    background-color: lawngreen;
+}
+.btn:hover {
+    border: 1px solid lawngreen;
+    color: lawngreen;
+    background-color: darkgreen;
 }
