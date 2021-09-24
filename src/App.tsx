@@ -5,6 +5,8 @@ import MovieList from "./components/MovieList";
 import MovieDetail from "./components/MovieDetail";
 import { Watchlist } from './components/Watchlist';
 import Logo from "./movie_nite.jpg"
+import { WatchlistcontextProvider } from './components/context/WatchlistContext';
+import SingleMovieInfo from './components/SingleMovieInfo';
 
 function App() {
   return (
@@ -24,9 +26,15 @@ function App() {
       <Switch>
         
         <Route path="/watchlist/">
-          <Watchlist  />
+          <WatchlistcontextProvider>
+            <Watchlist  />
+          </WatchlistcontextProvider>
         </Route>
       
+        <Route exact path="/:id">
+            <SingleMovieInfo />
+        </Route>
+
         <Route exact path="/">
           <MovieList />
         </Route>
