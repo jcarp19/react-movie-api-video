@@ -9,19 +9,17 @@ import "./MovieDetail.css";
 import "./SingleMovieInfo.css";
 
 
+export const Watch = React.createContext("Context");
+
+
 export const SingleMovieInfo = () => {
     const [singleMovie, setSingleMovie] = useState<SingleMovieDetail>();
 
     const {id}: {id: string} = useParams();
-    // console.log(`the params is ${id}`)
     useEffect(() => {
         MovieDetails(id)
         .then((data) => setSingleMovie(data))
-        // .then((data) => setGenre(data))
-        // .then((genres) => setGenre(genres))
-        // .then((data) => setGenre(data.genres))
     });
-    // let json_data = {genre}
 
     
     let posterPath = `https://image.tmdb.org/t/p/w500${singleMovie?.poster_path}`;
@@ -48,7 +46,7 @@ export const SingleMovieInfo = () => {
                     <p className="genre-name" key={index}>{genre.name}</p>
                 )}
             </div>
-            
+            <button>Add to Watchlist</button>
         </div>
     )
 }
