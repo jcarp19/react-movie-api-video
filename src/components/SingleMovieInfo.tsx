@@ -8,11 +8,25 @@ import "./MovieResults.css";
 import "./MovieDetail.css";
 import "./SingleMovieInfo.css";
 
- // context array of object
-export const single = [{
+ //context array of object
+export const single = [
+    {
     title: "",
-    runtime: 0
-}];
+    runtime: "",
+    plot: "",
+    posterPath: ""
+    }
+];
+// export const single = (movie: SingleMovieDetail) => {
+//     const [watchList, setWatchList] = useState<SingleMovieDetail[]>([
+//         // {title: "Star Wars", runtime: 123}
+//     ]);
+//     let newList = [...watchList];
+//     newList.push(movie);
+//     setWatchList(newList);
+// }
+
+
 
 
 export const SingleMovieInfo = () => {
@@ -25,7 +39,9 @@ export const SingleMovieInfo = () => {
     }); 
     
     let posterPath = `https://image.tmdb.org/t/p/w500${singleMovie?.poster_path}`;
-    
+    let title = `${singleMovie?.title}`;
+    let runtime = `${singleMovie?.runtime}`;
+    let plot = `${singleMovie?.overview}`;
     
     return (
         <div>
@@ -54,10 +70,11 @@ export const SingleMovieInfo = () => {
             </div>
             <button onClick={
                 () => {
-                    single.push({title: "Jim Carpenter", runtime: 121})
+                    single.push({title: title, runtime: runtime, plot: plot, posterPath: posterPath})
                     // single.push({singleMovie?.title})
                 }
             }>Add to Watchlist</button>
+            {/* <button onClick={single(singleMovie<SingleMovieDetail>)}>Add to Watchlist</button> */}
         </div>
     )
 }
