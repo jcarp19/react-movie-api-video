@@ -1,6 +1,4 @@
-MovieResults {
-    background-color: #000000;
-}
+
 .MovieSearchWrapper {
     margin: 0;
     padding: 0;
@@ -8,6 +6,9 @@ MovieResults {
 .headline {
     margin: 2rem 1rem .5rem 1rem;
     padding: 0;
+    Font-Family: 'Roboto Condensed', Sans-Serif;
+    Font-Size: 32px;
+    text-transform: uppercase;
 }
 .main-copy {
     margin: 0 1rem 2rem 1rem;
@@ -36,10 +37,28 @@ select {
     margin-bottom: 2em;
     border: 1px solid lawngreen;
     border-radius: 50px;
+    color: rgba(0, 0, 0, .5);
 }
+#filter .filter-option {
+    margin: 40px !important;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  }
+
 form > .btn {
     max-width: 50%;
     padding: 1em;
     align-self: center;
     font-weight: bold;
+}
+button:focus, input:focus, select:focus{
+    outline: none;
+}
+
+@media only screen and (min-width: 600px) {
+    .MovieSearchWrapper {
+        width: 400px;
+        margin: 4em auto;
+    }
 }

@@ -5,7 +5,6 @@
 }
 .logo-box {
     margin-top: 1em;
-
     display: flex;
     justify-content: center;
 }
@@ -36,4 +35,23 @@ nav > ul > li {
 }
 .nav-link:active {
     color:lawngreen;
+}
+
+@media only screen and (min-width: 600px) {
+    header {
+        display: flex;
+        align-items: center;
+        margin: 1em 2em;
+    }
+    .logo-box {
+        margin-top: 0;
+        justify-content: flex-start;
+    }
+    nav {
+        margin-top: 0;
+        width: 100%;
+    }
+    nav> ul {
+        justify-content: flex-end;
+    }
 }

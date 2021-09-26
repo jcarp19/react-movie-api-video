@@ -19,22 +19,15 @@ export default function MovieList() {
     }
    
     return (
-        <div>
-            {/* <button onClick={GetMovies}>Get axios response</button> */}
+        <div >
+            
             <MovieSearchForm onSubmit={onSubmit}/>
-            {/* <Router>
-                <Switch>
-                <Route exact path="/:id">
-                        <SingleMovieInfo />
-                    </Route>
-                    <Route exact path="/"> */}
+            
+            <div className="movie-results-container">
                     {searchMovie?.results?.map((result, index) => 
                         <MovieResult key={index} id={result.id} title={result.title} overview={result.overview} vote_average={result.vote_average} poster_path={result.poster_path} release_date={result.release_date} /> 
                     )}
-                    {/* </Route>
-                </Switch>
-            </Router>   */}
-            {/* {searchMovie && <button onClick={() => {}}>Load More</button>} */}
+            </div>
         </div>
     )
 }

@@ -1,10 +1,9 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Font-Family: 'Droid Serif', Serif;
+  Font-Size: 15px; */
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 16px;
   background-color: #000000;
 }
 

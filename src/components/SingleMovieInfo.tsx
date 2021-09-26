@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import SingleMovieDetail from '../models/SingleMovieDetail';
 import MovieDetails from '../services/MovieDetails';
 // import { Link } from 'react-router-dom';
@@ -11,6 +11,10 @@ import "./SingleMovieInfo.css";
  //context array of object
 export const single = [
     {
+    // title: "",
+    // runtime:"",
+    // plot: "",
+    // posterPath: ""
     title: "",
     runtime: "",
     plot: "",
@@ -44,7 +48,7 @@ export const SingleMovieInfo = () => {
     let plot = `${singleMovie?.overview}`;
     
     return (
-        <div>
+        <div className="single-movie-box">
             <h2 className="page-heading"></h2>
             <div className="movie-results">
                 <img className="moviePoster" src={posterPath} alt={singleMovie?.title} />
@@ -68,13 +72,13 @@ export const SingleMovieInfo = () => {
                     <p className="genre-name" key={index}>{genre.name}</p>
                 )}
             </div>
-            <button onClick={
+            <Link to="/watchlist">
+            <button className="btn watchlist-button" onClick={
                 () => {
                     single.push({title: title, runtime: runtime, plot: plot, posterPath: posterPath})
-                    // single.push({singleMovie?.title})
                 }
             }>Add to Watchlist</button>
-            {/* <button onClick={single(singleMovie<SingleMovieDetail>)}>Add to Watchlist</button> */}
+            </Link>
         </div>
     )
 }

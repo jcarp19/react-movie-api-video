@@ -18,8 +18,8 @@ function App() {
       </div>
       <nav>
         <ul>
-          <li><NavLink className="nav-link" exact to="/">Search</NavLink></li>
-          <li><NavLink className="nav-link" exact to="/watchlist">Watchlist</NavLink></li>
+          <li><NavLink className="nav-link" exact to="/"><i className="fas fa-search"></i> Search</NavLink></li>
+          <li><NavLink className="nav-link" exact to="/watchlist"><i className="fas fa-film"></i> Watchlist</NavLink></li>
         </ul>
       </nav>
       </header>
