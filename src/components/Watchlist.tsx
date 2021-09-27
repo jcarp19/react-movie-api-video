@@ -33,7 +33,9 @@ export const Watchlist = () => {
                         <button className="btn" onClick={() => {
                             let newMovieList = [...watchList]
                             newMovieList.splice(index, 1)
+                            setWatchList([]);
                             setWatchList(newMovieList);
+                            console.log(watchList)
                         }}>Remove from watch list</button>
                     </div>
                 </>

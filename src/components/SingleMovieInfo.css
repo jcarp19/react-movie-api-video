@@ -15,9 +15,3 @@
     margin-left: 1em;
     margin-top: 1em;
 }
-.movie-results:first-of-type {
-    visibility: none;
-}
-.movie.details:first-of-type {
-    visibility: hidden;
-}

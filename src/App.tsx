@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch, Route, BrowserRouter as Router, NavLink} from "react-router-dom";
+import {Switch, Route, BrowserRouter as Router, NavLink, Link} from "react-router-dom";
 import './App.css';
 import MovieList from "./components/MovieList";
 import MovieDetail from "./components/MovieDetail";
@@ -13,9 +13,11 @@ function App() {
     <div className="App">
       <Router>
       <header>
-      <div className="logo-box">
-        <img src={Logo} alt="logo" className="logo" />
-      </div>
+        <Link to="/">
+          <div className="logo-box">
+              <img src={Logo} alt="logo" className="logo" />
+          </div>
+        </Link>
       <nav>
         <ul>
           <li><NavLink className="nav-link" exact to="/"><i className="fas fa-search"></i> Search</NavLink></li>

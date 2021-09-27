@@ -8,19 +8,23 @@ import "./MovieResults.css";
 import "./MovieDetail.css";
 import "./SingleMovieInfo.css";
 
- //context array of object
+interface oneMovie {
+    title: string,
+    runtime: string,
+    plot: string,
+    posterPath: string
+}
+//context array of object
 export const single = [
     {
-    // title: "",
-    // runtime:"",
-    // plot: "",
-    // posterPath: ""
     title: "",
-    runtime: "",
+    runtime:"",
     plot: "",
     posterPath: ""
     }
+
 ];
+// export const single:<oneMovie>[];
 // export const single = (movie: SingleMovieDetail) => {
 //     const [watchList, setWatchList] = useState<SingleMovieDetail[]>([
 //         // {title: "Star Wars", runtime: 123}
