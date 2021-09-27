@@ -78,7 +78,8 @@ export const SingleMovieInfo = () => {
             </div>
             <Link to="/watchlist">
             <button className="btn watchlist-button" onClick={
-                () => {
+                (e) => {
+                    e.preventDefault(); 
                     single.push({title: title, runtime: runtime, plot: plot, posterPath: posterPath})
                 }
             }>Add to Watchlist</button>

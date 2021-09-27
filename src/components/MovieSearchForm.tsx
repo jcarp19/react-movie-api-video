@@ -6,7 +6,10 @@ export default function MovieSearchForm({onSubmit}:{onSubmit: (payload:{seachQue
     const [filter, setFilter] = useState("");
 
     return (
-        <div className="MovieSearchWrapper">
+        <div 
+        aria-label = "addDiv"
+        role = "Div"
+        className="MovieSearchWrapper">
             <h1 className="headline">Find a great movie</h1>
             <p className="main-copy">Use the search box below to search by title, or select from one of the filters to see a lists of great movies.</p>
             <form onSubmit={(e) => {
@@ -34,7 +37,10 @@ export default function MovieSearchForm({onSubmit}:{onSubmit: (payload:{seachQue
                         <option className="filter-option" value="top_rated">Top Rated</option>
                     </select>
                 
-                <button className="btn" type="submit">Show Me The Movies</button>
+                <button 
+                aria-label = "addSearch"
+                role = "Search"
+                className="btn" type="submit">Show Me The Movies</button>
             </form>
         </div>
     )
