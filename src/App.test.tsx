@@ -12,26 +12,26 @@ test('renders learn react link', () => {
 });
 test('renders learn react link', () => {
   render(<Watchlist />);
-  const button = screen.getByRole("Input", {name: "addInput"});
-  expect(button).toBeInTheDocument();
+  const input = screen.getByRole("Input", {name: "addInput"});
+  expect(input).toBeInTheDocument();
 });
 test('renders learn react link', () => {
   render(<Watchlist />);
-  const button = screen.getByRole("Input1", {name: "addInput1"});
-  expect(button).toBeInTheDocument();
+  const input1 = screen.getByRole("Input1", {name: "addInput1"});
+  expect(input1).toBeInTheDocument();
 });
 test('renders learn react link', () => {
   render(<MovieSearchForm />);
-  const button = screen.getByRole("Search", {name: "addSearch"});
-  expect(button).toBeInTheDocument();
+  const search = screen.getByRole("Search", {name: "addSearch"});
+  expect(search).toBeInTheDocument();
 });
 test('renders learn react link', () => {
   render(<MovieSearchForm />);
-  const button = screen.getByRole("Div", {name: "addDiv"});
-  expect(button).toBeInTheDocument();
+  const div = screen.getByRole("Div", {name: "addDiv"});
+  expect(div).toBeInTheDocument();
 });
 test('renders learn react link', () => {
   render(<Watchlist />);
-  const button = screen.getByRole("Div1", {name: "addDiv1"});
-  expect(button).toBeInTheDocument();
+  const div1 = screen.getByRole("Div1", {name: "addDiv1"});
+  expect(div1).toBeInTheDocument();
 });
