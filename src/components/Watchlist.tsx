@@ -19,10 +19,12 @@ export const Watchlist = () => {
     const [watchList, setWatchList] = useState(movie);
     
     return (
+        <>
+                <h2 className="watchlist-headline">Watchlist</h2>
             <div
             className="watchlist-container">
                 {watchList.map((item, index) =>
-                <>
+                <div className="watchlist-card">
                 <div
                 aria-label = "addDiv1"
                 role = "Div1"
@@ -33,7 +35,7 @@ export const Watchlist = () => {
                         <p 
                         aria-label = "addInput"
                         role = "Input"
-                        className="movie-title">Runtime: {item.runtime} minutes</p>
+                        className="movie-runtime">Runtime: {item.runtime} minutes</p>
                     </div>
                 </div>
                     <div className="movie-detail">
@@ -54,9 +56,10 @@ export const Watchlist = () => {
                             console.log(watchList)
                         }}>Remove from watch list</button>
                     </div>
-                </>
+                </div>
                 )}
             </div>
+            </>
                 
         )
     }

@@ -4,7 +4,7 @@
 .movie-results {
     background-color: #000000;
     box-sizing: border-box;
-    padding: 1em;
+    padding: 1em 2em;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -50,18 +50,27 @@
     .movie-results-container {
         display:flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-evenly;
+
     }
     .spacer {
         display: none;
     }
     .movie-results {
+        padding: 0;
+        margin: 0;
         flex-direction: column;
-        max-width: 33%;
-        margin-left: 2em;
+        max-width: 25%;
+        margin: 1rem;
+        /* border: 1px solid #ffffff; */
+        padding: 1rem;
+        border-radius: 7px;
     }
     .moviePoster {
         width: 100%;
+    }
+    .movie-title {
+        font-size: 1.25em;
     }
     .movie-results-info {
         display: flex;

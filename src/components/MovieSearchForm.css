@@ -1,7 +1,7 @@
 
 .MovieSearchWrapper {
     margin: 0;
-    padding: 0;
+    padding: 1em;
 }
 .headline {
     margin: 2rem 1rem .5rem 1rem;
@@ -47,7 +47,7 @@ select {
   }
 
 form > .btn {
-    max-width: 50%;
+    /* max-width: 50%; */
     padding: 1em;
     align-self: center;
     font-weight: bold;

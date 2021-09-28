@@ -3,12 +3,12 @@ import GetMovies from "../services/GetMovies";
 import  MovieSearchForm from "../components/MovieSearchForm";
 import SearchMovieTitle from "../models/SearchMovieTitle";
 import MovieResult from "../components/MovieResult";
-import searchParams from "../models/searchParams";
-import LoadMoreMovies from "../services/LoadMoreMovies";
-import { resourceLimits } from "worker_threads";
-import SingleMovieDetail from "../models/SingleMovieDetail";
-import { Link, Switch, Route, BrowserRouter as Router} from "react-router-dom";
-import SingleMovieInfo from "./SingleMovieInfo";
+// import searchParams from "../models/searchParams";
+// import LoadMoreMovies from "../services/LoadMoreMovies";
+// import { resourceLimits } from "worker_threads";
+// import SingleMovieDetail from "../models/SingleMovieDetail";
+// import { Link, Switch, Route, BrowserRouter as Router} from "react-router-dom";
+// import SingleMovieInfo from "./SingleMovieInfo";
 
 export default function MovieList() {
     const [searchMovie, setSearchMovie] = useState<SearchMovieTitle>();

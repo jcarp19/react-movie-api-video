@@ -1,4 +1,33 @@
+.watchlist-headline {
+    margin: 2rem;
+}
 .watchlist-container {
-    padding-top: 4em;
     padding-bottom: 6em;
+}
+
+@media only screen and (min-width: 600px) {
+    .watchlist-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .watchlist-card {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+    .watchlist-card > .movie-results {
+        width: 50%; 
+        max-width: 50%;
+        padding: 0;
+        margin: 0;
+    }
+    .watchlist-card > .movie-detail {
+        width: 50%; 
+        max-width: 50%;
+        padding: 0 0 0 1.5em;
+        margin: 0;
+    }
 }

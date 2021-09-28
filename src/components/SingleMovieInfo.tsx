@@ -16,21 +16,7 @@ interface Movie {
 }
 //context array of object
 export const single:Movie[] = [
-    
-    
 ];
-// export const single:<oneMovie>[];
-// export const single = (movie: SingleMovieDetail) => {
-//     const [watchList, setWatchList] = useState<SingleMovieDetail[]>([
-//         // {title: "Star Wars", runtime: 123}
-//     ]);
-//     let newList = [...watchList];
-//     newList.push(movie);
-//     setWatchList(newList);
-// }
-
-
-
 
 export const SingleMovieInfo = () => {
     const [singleMovie, setSingleMovie] = useState<SingleMovieDetail>();
@@ -47,17 +33,17 @@ export const SingleMovieInfo = () => {
     let plot = `${singleMovie?.overview}`;
     
     return (
+        <>
+        <h2 className="page-heading">Movie Details</h2>
         <div className="single-movie-box">
-            <h2 className="page-heading"></h2>
-            <div className="movie-results">
-                <img className="moviePoster" src={posterPath} alt={singleMovie?.title} />
-                <div className="movie-results-info">
-                    <h2>{singleMovie?.title}</h2>
-                    <p className="movie-release">Released: {singleMovie?.release_date.substr(0,4)}</p>
-                </div>
+            <div className="single-results">
+                <img className="single-moviePoster" src={posterPath} alt={singleMovie?.title} />
+                {/* <div className="single-movie-results-info">
+                </div> */}
             </div>
-            <div className="movie-detail">
-                {/* <p>{singleMovie?.overview}</p> */}
+            <div className="single-movie-detail">
+                <h2>{singleMovie?.title}</h2>
+                <p className="movie-release">Released: {singleMovie?.release_date.substr(0,4)}</p>
                 <details>
                     <summary>Movie Plot</summary>
                 <p>{singleMovie?.overview}</p>
@@ -70,16 +56,27 @@ export const SingleMovieInfo = () => {
                 {singleMovie?.genres?.map((genre, index) =>
                     <p className="genre-name" key={index}>{genre.name}</p>
                 )}
-            </div>
-            <Link to="/watchlist">
-            <button className="btn watchlist-button" onClick={
+            
+            <button className="btn watchlist-button" id="add-to-watchlist" onClick={
                 (e) => {
+                    let btnValue
+                    let btnState
+                    let btnBGColor
+
+                    console.log(btnValue);
                     e.preventDefault(); 
                     single.push({title: title, runtime: runtime, plot: plot, posterPath: posterPath})
+                    
+                    // change button text to "Added to Watchlist"
+                    btnValue = (document.getElementById("add-to-watchlist") as HTMLButtonElement).innerHTML = "Added to Watchlist";
+                    btnState = (document.getElementById("add-to-watchlist") as HTMLButtonElement).disabled = true;
+                    btnBGColor = (document.getElementById("add-to-watchlist") as HTMLButtonElement).style.backgroundColor = "darkgreen";
                 }
             }>Add to Watchlist</button>
-            </Link>
+            
+            </div>
         </div>
+        </>
     )
 }
 
