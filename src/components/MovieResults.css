@@ -55,4 +55,20 @@
     .spacer {
         display: none;
     }
+    .movie-results {
+        flex-direction: column;
+        max-width: 33%;
+        margin-left: 2em;
+    }
+    .moviePoster {
+        width: 100%;
+    }
+    .movie-results-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 0em;
+        margin-top: 1em;
+    }
+
 }

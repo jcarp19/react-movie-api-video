@@ -8,21 +8,16 @@ import "./MovieResults.css";
 import "./MovieDetail.css";
 import "./SingleMovieInfo.css";
 
-interface oneMovie {
+interface Movie {
     title: string,
     runtime: string,
     plot: string,
     posterPath: string
 }
 //context array of object
-export const single = [
-    {
-    title: "",
-    runtime:"",
-    plot: "",
-    posterPath: ""
-    }
-
+export const single:Movie[] = [
+    
+    
 ];
 // export const single:<oneMovie>[];
 // export const single = (movie: SingleMovieDetail) => {
