@@ -5,33 +5,39 @@ import SingleMovieInfo from './components/SingleMovieInfo';
 import { Watchlist } from './components/Watchlist';
 import MovieSearchForm from './components/MovieSearchForm';
 
-test('renders learn react link', () => {
-  render(<Watchlist />);
-  const button = screen.getByRole("button", {name: "addMovie"});
-  expect(button).toBeInTheDocument();
+test('Text that displays search for title or filters movies', () => {
+  const spy = jest.fn();  
+  render(<MovieSearchForm onSubmit = {spy} />);
+  const para = screen.getByRole("p", {name: "addp"});
+  expect(para).toBeInTheDocument();
 });
-test('renders learn react link', () => {
-  render(<Watchlist />);
-  const input = screen.getByRole("Input", {name: "addInput"});
-  expect(input).toBeInTheDocument();
+test('Text that displays heading find a great movie', () => {
+  const spy = jest.fn(); 
+  render(<MovieSearchForm onSubmit = {spy} />);
+  const h1 = screen.getByRole("h1", {name: "addh1"});
+  expect(h1).toBeInTheDocument();
 });
-test('renders learn react link', () => {
-  render(<Watchlist />);
-  const input1 = screen.getByRole("Input1", {name: "addInput1"});
-  expect(input1).toBeInTheDocument();
+test('Selects for filtering movies', () => {
+  const spy = jest.fn(); 
+  render(<MovieSearchForm onSubmit = {spy} />);
+  const select = screen.getByRole("select", {name: "addselect"});
+  expect(select).toBeInTheDocument();
 });
-test('renders learn react link', () => {
-  render(<MovieSearchForm />);
+test('Button that searchs for the movies', () => {
+ const spy = jest.fn();  
+  render(<MovieSearchForm onSubmit = {spy} />);
   const search = screen.getByRole("Search", {name: "addSearch"});
   expect(search).toBeInTheDocument();
 });
-test('renders learn react link', () => {
-  render(<MovieSearchForm />);
+test('Div that holds the search wrapper', () => {
+  const spy = jest.fn(); 
+  render(<MovieSearchForm onSubmit = {spy} />);
   const div = screen.getByRole("Div", {name: "addDiv"});
   expect(div).toBeInTheDocument();
 });
-test('renders learn react link', () => {
-  render(<Watchlist />);
-  const div1 = screen.getByRole("Div1", {name: "addDiv1"});
-  expect(div1).toBeInTheDocument();
+test('Input that is the place holder for search to add text', () => {
+  const spy = jest.fn(); 
+  render(<MovieSearchForm onSubmit = {spy} />);
+  const input = screen.getByRole("input", {name: "addinput"});
+  expect(input).toBeInTheDocument();
 });

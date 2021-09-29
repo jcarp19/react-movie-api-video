@@ -19,32 +19,22 @@ export const Watchlist = () => {
     const [watchList, setWatchList] = useState(movie);
     
     return (
+        <>
+                <h2 className="watchlist-headline">Watchlist</h2>
             <div
             className="watchlist-container">
                 {watchList.map((item, index) =>
-                <>
-                <div
-                aria-label = "addDiv1"
-                role = "Div1"
-                 className="movie-results" key={index}>
+                <div className="watchlist-card">
+                <div className="movie-results" key={index}>
                     <img className="moviePoster" src={item.posterPath} />
                     <div className="movie-results-info">
                         <h2 className="movie-title">{item.title}</h2>
-                        <p 
-                        aria-label = "addInput"
-                        role = "Input"
-                        className="movie-title">Runtime: {item.runtime} minutes</p>
+                        <p className="movie-runtime">Runtime: {item.runtime} minutes</p>
                     </div>
                 </div>
                     <div className="movie-detail">
-                        <p
-                        aria-label = "addInput1"
-                        role = "Input1"
-                        >{item.plot}</p>
-                        <button 
-                        aria-label = "addMovie"
-                        role = "button"
-                        className="btn" onClick={(e) => {
+                        <p >{item.plot}</p>
+                        <button className="btn" onClick={(e) => {
                             e.preventDefault(); 
                             let newMovieList = [...watchList]
                             newMovieList.splice(index, 1)
@@ -54,9 +44,10 @@ export const Watchlist = () => {
                             console.log(watchList)
                         }}>Remove from watch list</button>
                     </div>
-                </>
+                </div>
                 )}
             </div>
+            </>
                 
         )
     }

@@ -1,5 +1,28 @@
+.single-movie-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 6em;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 2rem;
+}
 .page-heading {
-    margin-left: 1em;
+    margin-top: 2em;
+    margin-left: 1.5em;
+}
+.single-results {
+    width: 100%;
+}
+.single-moviePoster {
+    max-width: 100%;
+}
+.single-movie-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 6em;
+
 }
 .genre-name {
     padding: 0;
@@ -8,10 +31,29 @@
 .genre-heading {
     margin-bottom: .5em;
 }
-.single-movie-box {
-    padding-bottom: 6em;
-}
 .watchlist-button {
-    margin-left: 1em;
-    margin-top: 1em;
+    align-self: center;
+    margin-top: 2em;
+}
+@media only screen and (min-width: 600px) {
+    .single-movie-box {
+        flex-direction: row;
+        position:relative;
+    }
+    .single-movie-detail {
+        width: 600px;
+        margin-left: 2rem; 
+    }
+    .single-results {
+        width: 200px;
+    }
+    .single-movie-detail > h2 {
+        margin-top: 0;
+    }
+    .single-movie-detail > .movie-release {
+        margin: 0;
+    }
+    details {
+        margin-top: 1em;
+    }
 }

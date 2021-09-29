@@ -10,8 +10,14 @@ export default function MovieSearchForm({onSubmit}:{onSubmit: (payload:{seachQue
         aria-label = "addDiv"
         role = "Div"
         className="MovieSearchWrapper">
-            <h1 className="headline">Find a great movie</h1>
-            <p className="main-copy">Use the search box below to search by title, or select from one of the filters to see a lists of great movies.</p>
+            <h1 
+            aria-label = "addh1"
+            role = "h1"
+            className="headline">Find a great movie</h1>
+            <p 
+            aria-label = "addp"
+            role = "p"
+            className="main-copy">Use the search box below to search by title, or select from one of the filters to see a lists of great movies.</p>
             <form onSubmit={(e) => {
                 e.preventDefault();
                 onSubmit({seachQuery: movieQuery, filterType: filter});
@@ -19,12 +25,18 @@ export default function MovieSearchForm({onSubmit}:{onSubmit: (payload:{seachQue
                 setFilter("")
                 }}>
                 {/* <label htmlFor="search" className="form-label">Search</label> */}
-                <input name="search" id="search" placeholder="Search by Title" type="text" value={movieQuery} onChange={(e) => {
+                <input 
+                aria-label = "addinput"
+                role = "input"
+                name="search" id="search" placeholder="Search by Title" type="text" value={movieQuery} onChange={(e) => {
                     setMovieQuery(e.target.value);
                 }} />
                 
                 {/* <label htmlFor="filter" className="form-label">Filter By:</label> */}
-                    <select name="filter" id="filter" onChange={(e) => {
+                    <select 
+                    aria-label = "addselect"
+                    role = "select"
+                    name="filter" id="filter" onChange={(e) => {
                         console.log(e.target.value)
                         setFilter(e.target.value)
                         }}>
