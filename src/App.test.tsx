@@ -14,14 +14,14 @@ test('Text that displays search for title or filters movies', () => {
 test('Text that displays heading find a great movie', () => {
   const spy = jest.fn(); 
   render(<MovieSearchForm onSubmit = {spy} />);
-  const input = screen.getByRole("h1", {name: "addh1"});
-  expect(input).toBeInTheDocument();
+  const h1 = screen.getByRole("h1", {name: "addh1"});
+  expect(h1).toBeInTheDocument();
 });
 test('Selects for filtering movies', () => {
   const spy = jest.fn(); 
   render(<MovieSearchForm onSubmit = {spy} />);
-  const input1 = screen.getByRole("select", {name: "addselect"});
-  expect(input1).toBeInTheDocument();
+  const select = screen.getByRole("select", {name: "addselect"});
+  expect(select).toBeInTheDocument();
 });
 test('Button that searchs for the movies', () => {
  const spy = jest.fn();  
@@ -38,6 +38,6 @@ test('Div that holds the search wrapper', () => {
 test('Input that is the place holder for search to add text', () => {
   const spy = jest.fn(); 
   render(<MovieSearchForm onSubmit = {spy} />);
-  const div1 = screen.getByRole("input", {name: "addinput"});
-  expect(div1).toBeInTheDocument();
+  const input = screen.getByRole("input", {name: "addinput"});
+  expect(input).toBeInTheDocument();
 });
