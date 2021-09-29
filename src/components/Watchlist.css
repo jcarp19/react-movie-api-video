@@ -19,14 +19,14 @@
         box-sizing: border-box;
     }
     .watchlist-card > .movie-results {
-        width: 50%; 
-        max-width: 50%;
+        width: 33%; 
+        max-width: 33%;
         padding: 0;
         margin: 0;
     }
     .watchlist-card > .movie-detail {
-        width: 50%; 
-        max-width: 50%;
+        width: 66%; 
+        max-width: 66%;
         padding: 0 0 0 1.5em;
         margin: 0;
     }
